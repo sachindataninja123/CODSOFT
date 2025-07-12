@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTACK - Search Jobs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header  Section-->
+    <header>
+        <nav class="obj-width">
+            <div class="nav-logo">
+                <a href="index.html"><img src="./images//logo.png" alt="logo"></a>
+            </div>
+            <div class="nav-menu-btn" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav_links">
+                <li class="navItems"><a href="index.html">Home</a></li>
+                <li class="navItems"><a href="./jobs/job.html">Browse Jobs</a></li>
+                <li class="navItems"><a href="#">Contact</a></li>
+                <li class="navItems"><button class="btn">Join</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact obj-width sec-space extra-space">
+        <div class="contact-image">
+            <h2>Get in touch</h2>
+            <p>Most viewed and all-time top-selling services</p>
+            <img src="./images/contact.svg" alt="contact">
+        </div>
+
+        <form id="contact-form" method="post" action="send_email.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" for="myname" autocomplete="off" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" for="myemail" autocomplete="off" required>
+
+            <label for="meaasge1">Message:</label>
+            <textarea name="message1" id="message1" rows="7" required></textarea>
+
+            <input type="submit" id="g-btn" value="submit">
+        </form>
+    </section>
+
+       <section class="map  obj-width  extra-space">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224612.78151164702!2d77.0072238987349!3d28.401910562112185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdc15f5a424b1%3A0xe4f50576c850e0f2!2sFaridabad%2C%20Haryana!5e0!3m2!1sen!2sin!4v1752134833833!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </section>
+     
+    <!-- Footer  Section-->
+    <footer class="footer">
+        <div class="obj-width">
+            <div class="top">
+                <div>
+                    <img class="logo" src="./images/logo.png" alt="logo">
+                    <p>Search your desired jobs.</p>
+                </div>
+                <div>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div>
+                    <h3>Project</h3>
+                    <a href="#">Changelog</a>
+                    <a href="#">Status</a>
+                    <a href="#">License</a>
+                    <a href="#">All Versions</a>
+                </div>
+                <div>
+                    <h3>Community</h3>
+                    <a href="#">Github</a>
+                    <a href="#">Issues</a>
+                    <a href="#">Project</a>
+                    <a href="#">Twitter</a>
+                </div>
+                <div>
+                    <h3>Help</h3>
+                    <a href="#">Support</a>
+                    <a href="#">Troubleshooting</a>
+                    <a href="#">Contact us</a>
+                </div>
+                <div>
+                    <h3>Others</h3>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">License</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="toggle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,504 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+/* Global CSS */
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 60px;
+}
+h3 {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+.sec-space {
+  padding: 4rem 0;
+}
+.extra-space {
+  padding: 8rem 1rem;
+ 
+}
+.obj-width {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/*Navbar*/
+header {
+  background-color: #1f4a40;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo img {
+  width: 120px;
+}
+.navItems a {
+  text-decoration: none;
+  color: #fff;
+}
+.navItems {
+  list-style: none;
+}
+.nav_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.btn {
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+.nav-menu-btn {
+  color: #fff;
+  font-size: 1.3rem;
+  display: none;
+  cursor: pointer;
+}
+/* hero section */
+.hero {
+  background-color: #1f4a40;
+}
+.hero-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+.hero-left {
+  width: 45%;
+  color: #fff;
+}
+.hero-left p {
+  padding: 1.3rem 0;
+}
+.hero-right {
+  width: 50%;
+}
+.hero-right img {
+  width: 600px;
+  height: 500px;
+}
+.search-job {
+  position: relative;
+}
+.search-job input {
+  width: 90%;
+  height: 3.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 35px;
+  padding: 0 17px;
+}
+.search-job a {
+  text-decoration: none;
+  color: #000;
+  position: absolute;
+  right: 65px;
+  top: 6px;
+  padding: 10px 20px;
+  background-color: #1f4a40;
+  border-radius: 35px;
+  color: white;
+  cursor: pointer;
+}
+.features .features_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.features .features_card div {
+  width: 200px;
+}
+.features .features_card img {
+  width: 50px;
+  margin-top: 4rem;
+}
+
+.jobs .job-id {
+  display: flex;
+  margin-top: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+}
+.jobs .job-id li {
+  padding: 20px 40px;
+  cursor: pointer;
+  color: #000;
+}
+.jobs .job-id li.active {
+  background-color: #51a995;
+  color: #fff;
+}
+.jobs .jList {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid gray;
+  align-items: center;
+  place-items: center;
+  cursor: pointer;
+  color: #000;
+  padding: 2rem 2rem;
+}
+.jobs .jList.delete {
+  display: none;
+}
+.jobs .jList h3 {
+  padding-bottom: 0;
+}
+.jobs .jList img {
+  width: 40px;
+}
+.jobs .jList:hover {
+  background: #ecf1ee;
+}
+.trust {
+  padding: 10px;
+}
+.trust .t-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  flex-wrap: wrap;
+  padding-right: 6rem;
+}
+.trust .t-box img {
+  margin: 1rem 1rem 1rem 0;
+}
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.team-container .f1-box {
+  border: 1px solid #c1e1d9;
+  width: 280px;
+  padding: 2rem 0;
+  border-radius: 20px;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.f1-box img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+#g-btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  background-color: #51a995;
+  border-radius: 30px;
+  color: white;
+  margin-top: 2rem;
+}
+#key {
+  font-size: 0.8rem;
+  background-color: #edcfee;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+footer {
+  background-color: #1f4a40;
+  color: #fff;
+  padding: 4rem 0;
+}
+.top {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: space-between;
+}
+.top .logo {
+  width: 160px;
+  margin-bottom: 1rem;
+}
+.top i {
+  color: white;
+  font-size: 1.7rem;
+  padding-left: 15px;
+}
+.bottom a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 10px 0;
+}
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.bottom h3 {
+  margin-top: 3rem;
+}
+.bottom div a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* browse jobs */
+.jobs form{
+  margin-top: 3rem;
+  width: 100%;
+  border: 1px solid #51a995;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jobs form i{
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  color: gray;
+}
+.jobs form input{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 1rem 0.5rem;
+  font-size: 1.2 rem;
+}
+/* 
+job-details */
+
+.job-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fcfa;
+  border: 1px solid #51a995;
+  border-radius: 38px;
+  padding: 2rem;
+}
+.job-header img{
+  width: 100px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 15px;
+  margin-right: 2rem;
+}
+.job-image-row{
+  display: flex;
+  align-items: center;
+}
+.job-description p{
+  padding-bottom: 2rem;
+}
+#footer-id{
+  margin-top: -9rem;
+}
+
+/* contact */
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contact-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contact form{
+  width: 400px;
+}
+.contact input, textarea {
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+  border: 1px solid #51a995;
+  outline: none;
+  padding: 0.8rem 0.5rem;
+  font-size: 1.1rem;
+}
+.map{
+  margin-top: -10rem;
+}
+@media (max-width: 699px) {
+  .nav_links {
+    display: none;
+    flex-direction: column;
+    width: 280px;
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    z-index: 999;
+    opacity: 0;
+    transition: 0.5s all ease;
+    text-align: left;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+  .navItems a {
+    color: black;
+  }
+  .nav-menu-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+  .nav_links.active {
+    display: flex;
+    opacity: 1;
+    transition: 0.5s all ease;
+  }
+  .btn {
+    background-color: #1f4a40;
+    color: #fff;
+  }
+  .hero-box {
+    margin-top: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding: 30px 0;
+  }
+  .hero-left {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+  }
+  .hero-left p {
+    padding: 1.3rem 0;
+  }
+  .hero-right {
+    text-align: center;
+    width: 100%;
+  }
+  .hero-right img {
+    width: 350px;
+    height: 400px;
+  }
+  .search-job input {
+    width: 78%;
+  }
+  .features {
+    text-align: left;
+    padding-left: 1rem;
+  }
+  .features .features_card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: auto;
+  }
+
+  .features h2,
+  #one {
+    padding-left: 0px;
+  }
+  .jobs {
+    margin-top: 4rem;
+    padding: 10px;
+  }
+  .jobs .job-id {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .jobs .job-id li {
+    padding: 20px 30px;
+    text-wrap: nowrap;
+  }
+  .jobs-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .jobs .jList {
+    margin-top: 1rem;
+    width: 48%;
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 15px;
+    padding: 2rem 1rem;
+  }
+  .team {
+    padding: 10px;
+  }
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    padding-left: 4rem;
+  }
+  .team-container .f1-box {
+    margin-top: 1rem;
+  }
+  .trust .t-box {
+    padding-right: 0rem;
+  }
+  .bottom {
+    padding-left: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .top {
+    padding-left: 20px;
+  }
+  .top .logo {
+    width: 100px;
+    margin-bottom: 0.7rem;
+  }
+  .top i {
+    padding-right: 15px;
+  }
+  .job-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 15px;
+    padding: 1rem;
+  }
+  .contact{
+  flex-direction: column;
+}
+}

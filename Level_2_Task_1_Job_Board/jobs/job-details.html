@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSTACK - Search Jobs</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header  Section-->
+    <header>
+        <nav class="obj-width">
+            <div class="nav-logo">
+                <a href="../index.html"><img src="../images//logo.png" alt="logo"></a>
+            </div>
+            <div class="nav-menu-btn" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav_links">
+                <li class="navItems"><a href="../index.html">Home</a></li>
+                <li class="navItems"><a href="../jobs/job.html">Browse Jobs</a></li>
+                <li class="navItems"><a href="../contact.html">Contact</a></li>
+                <li class="navItems"><button class="btn">Join</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="jobDetails" class="extra-space obj-width">
+
+
+    </div>
+
+
+    <!-- Footer  Section-->
+    <footer class="footer" id="footer-id">
+        <div class="obj-width">
+            <div class="top">
+                <div>
+                    <img class="logo" src="../images/logo.png" alt="logo">
+                    <p>Search your desired jobs.</p>
+                </div>
+                <div>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div>
+                    <h3>Project</h3>
+                    <a href="#">Changelog</a>
+                    <a href="#">Status</a>
+                    <a href="#">License</a>
+                    <a href="#">All Versions</a>
+                </div>
+                <div>
+                    <h3>Community</h3>
+                    <a href="#">Github</a>
+                    <a href="#">Issues</a>
+                    <a href="#">Project</a>
+                    <a href="#">Twitter</a>
+                </div>
+                <div>
+                    <h3>Help</h3>
+                    <a href="#">Support</a>
+                    <a href="#">Troubleshooting</a>
+                    <a href="#">Contact us</a>
+                </div>
+                <div>
+                    <h3>Others</h3>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">License</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParam = new URLSearchParams(window.location.search);
+            const index = urlParam.get("id");
+            const jobDetailsContainer = document.getElementById("jobDetails");
+
+            if (!jCategory || !jCategory[index]) {
+                jobDetailsContainer.innerHTML = "<p>Job not found. Please go back and try again.</p>";
+                return;
+            }
+            const selectJob = jCategory[index];
+
+
+            jobDetailsContainer.innerHTML = `
+             <div class="job-header">
+            <div class="job-image-row">
+                <img src="${selectJob.image}" alt="google">
+                <div>
+                    <h2>${selectJob.companyName}</h2>
+                    <span>${selectJob.location}</span>
+                </div>
+            </div>
+            <a id="g-btn" href="#">Apply Now</a>
+        </div>
+    </div>
+    <div class="features sec-space obj-width">
+        <div class="features_card">
+            <div>
+                <img src="../images/vacancy.png" alt="fe1">
+                <h3>Vacancy</h3>
+                <p>${selectJob.vacancy}</p>
+            </div>
+            <div>
+                <img src="../images/fe 1.png" alt="fe2">
+                <h3>Position</h3>
+                <p>${selectJob.title}</p>
+            </div>
+            <div>
+                <img src="../images/hour.png" alt="fe3">
+                <h3>Hour</h3>
+                <p>${selectJob.hours}</p>
+            </div>
+            <div>
+                <img src="../images/salary.png" alt="fe4">
+                <h3>Salary</h3>
+                <p>${selectJob.rate}</p>
+            </div>
+        </div>
+
+
+        <div class="job-description sec-space">
+            <h3>Job Description</h3>
+            <p>${selectJob.description}</p>
+            <p><b>Key-skills : </b>${selectJob.skills}</p>
+
+            <h3>Employment Status</h3>
+            <p>- ${selectJob.status}</p>
+
+            <h3>Workplace</h3>
+            <p>- ${selectJob.workplace}</p>
+
+            <h3>Educational Requirements</h3>
+            <p>${selectJob.education}</p>
+
+            <h3>Experience Requirements</h3>
+            <p>- ${selectJob.experience}</p>
+
+        </div>
+            `
+        })
+    </script>
+
+    <script src="job-list.js"></script>
+    <script src="../toggle.js"></script>
+    <script src="jobsearch.js"></script>
+
+</body>
+
+</html>
