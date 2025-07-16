@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizCraft - Online Quiz Maker</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 QuizCraft</h1>
+            <p>Create, Share, and Take Amazing Quizzes</p>
+        </div>
+
+        <div class="auth-section">
+            <div class="user-info">
+                <span id="welcomeMessage">Welcome! Please log in to get started.</span>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn btn-primary" id="loginBtn">Login</button>
+                <button class="btn btn-secondary" id="registerBtn">Register</button>
+                <button class="btn btn-danger hidden" id="logoutBtn">Logout</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Home Section -->
+            <div id="homeSection" class="section active">
+                <div class="nav-buttons">
+                    <button class="btn btn-success" id="createQuizBtn">📝 Create Quiz</button>
+                    <button class="btn btn-primary" id="browseQuizzesBtn">📚 Browse Quizzes</button>
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <h2 style="color: #333; margin-bottom: 20px;">Get Started with QuizCraft!</h2>
+                    <p style="color: #666; font-size: 1.1rem; line-height: 1.6;">
+                        Create engaging quizzes with multiple-choice questions, or challenge yourself by taking quizzes
+                        created by others.
+                        Track your progress and improve your knowledge across various topics.
+                    </p>
+                </div>
+            </div>
+
+            <div id="createSection" class="section">
+                <h2 style="text-align: center; color: #333; margin-bottom: 30px;">Create Your Quiz</h2>
+
+                <div class="form-group">
+                    <label for="quizTitle">Quiz Title</label>
+                    <input type="text" id="quizTitle" placeholder="Enter quiz title">
+                </div>
+
+                <div class="form-group">
+                    <label for="quizDescription">Description</label>
+                    <textarea id="quizDescription" rows="3" placeholder="Brief description of your quiz"></textarea>
+                </div>
+
+                <div id="questionsContainer">
+
+                </div>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <button class="btn btn-secondary" id="addQuestionBtn">➕ Add Question</button>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-success" id="saveQuizBtn">💾 Save Quiz</button>
+                    <button class="btn btn-secondary" id="backToHomeBtn">🏠 Back to Home</button>
+                </div>
+            </div>
+
+
+            <div id="browseSection" class="section">
+                <h2 style="text-align: center; color: #333; margin-bottom: 30px;">Available Quizzes</h2>
+
+                <div id="quizList">
+
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-secondary" id="backToHomeBtn2">🏠 Back to Home</button>
+                </div>
+            </div>
+
+        
+            <div id="takeSection" class="section">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text">
+                        <span id="progressText">Question 1 of 5</span>
+                    </div>
+                </div>
+
+                <div id="quizContent">
+
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button class="btn btn-primary" id="nextQuestionBtn">Next Question</button>
+                    <button class="btn btn-success hidden" id="submitQuizBtn">Submit Quiz</button>
+                    <button class="btn btn-secondary" id="cancelQuizBtn">Cancel</button>
+                </div>
+            </div>
+
+
+            <div id="resultsSection" class="section">
+                <div class="results-section">
+                    <div class="score-display" id="scoreDisplay">0/0</div>
+                    <div class="score-message" id="scoreMessage">Great job!</div>
+
+                    <div style="margin: 30px 0;">
+                        <button class="btn btn-primary" id="retakeQuizBtn">🔄 Retake Quiz</button>
+                        <button class="btn btn-secondary" id="backToBrowseBtn">📚 Browse More Quizzes</button>
+                    </div>
+
+                    <div class="answer-review" id="answerReview">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2 style="margin-bottom: 20px; color: #333;">Login</h2>
+            <div class="form-group">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter password">
+            </div>
+            <button class="btn btn-primary" id="loginSubmit" style="width: 100%;">Login</button>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeRegister">&times;</span>
+            <h2 style="margin-bottom: 20px; color: #333;">Register</h2>
+            <div class="form-group">
+                <label for="registerUsername">Username</label>
+                <input type="text" id="registerUsername" placeholder="Choose username">
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" placeholder="Choose password">
+            </div>
+            <button class="btn btn-primary" id="registerSubmit" style="width: 100%;">Register</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
